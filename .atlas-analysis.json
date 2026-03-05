@@ -1,0 +1,158 @@
+{
+  "projectType": "saas",
+  "projectName": "SyftHub",
+  "projectDescription": "A registry and discovery platform for AI/ML endpoints with identity provider capabilities - GitHub for AI endpoints.",
+  "theme": "palm",
+  "primaryColor": "#b96a7e",
+  "lightColor": "#d1ab82",
+  "darkColor": "#79a0a3",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/endpoints",
+              "concepts/organizations",
+              "concepts/visibility",
+              "concepts/identity-provider"
+            ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "guide/endpoints/creating",
+              "guide/endpoints/managing",
+              "guide/endpoints/discovery",
+              "guide/organizations/overview",
+              "guide/organizations/managing",
+              "guide/authentication"
+            ]
+          },
+          {
+            "group": "SDKs",
+            "pages": [
+              "sdks/overview",
+              "sdks/python",
+              "sdks/typescript",
+              "sdks/golang"
+            ]
+          },
+          {
+            "group": "CLI",
+            "pages": [
+              "cli/installation",
+              "cli/commands",
+              "cli/configuration"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/production",
+              "deployment/configuration"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "api/introduction",
+              "api/authentication"
+            ]
+          },
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/endpoints/auth",
+              "api/endpoints/users",
+              "api/endpoints/endpoints",
+              "api/endpoints/organizations",
+              "api/endpoints/tokens"
+            ]
+          },
+          {
+            "group": "Identity Provider",
+            "pages": [
+              "api/idp/overview",
+              "api/idp/satellite-tokens",
+              "api/idp/jwks"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Architecture",
+        "groups": [
+          {
+            "group": "System Design",
+            "pages": [
+              "architecture/overview",
+              "architecture/components",
+              "architecture/authentication",
+              "architecture/federation"
+            ]
+          },
+          {
+            "group": "Development",
+            "pages": [
+              "development/setup",
+              "development/testing",
+              "development/contributing"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Endpoint discovery and registry for ML models and data sources",
+    "GitHub-style endpoint URLs (/{owner}/{endpoint-slug})",
+    "Flexible visibility controls (public, internal, private)",
+    "Organization collaboration with role-based access control",
+    "Federated Identity Provider with RS256-signed satellite tokens",
+    "Official Python, TypeScript, and Go SDKs",
+    "CLI tool for endpoint management",
+    "Star/trending system for discovering popular endpoints",
+    "Full-stack application with React frontend and FastAPI backend",
+    "Docker-based deployment with PostgreSQL and Redis"
+  ],
+  "publicApiSurface": [
+    "POST /api/v1/auth/register",
+    "POST /api/v1/auth/login",
+    "POST /api/v1/auth/refresh",
+    "GET /api/v1/auth/me",
+    "GET /api/v1/users/{id}",
+    "PUT /api/v1/users/me",
+    "POST /api/v1/endpoints",
+    "GET /api/v1/endpoints",
+    "GET /api/v1/endpoints/public",
+    "GET /api/v1/endpoints/trending",
+    "POST /api/v1/endpoints/{id}/star",
+    "POST /api/v1/organizations",
+    "GET /api/v1/organizations",
+    "POST /api/v1/organizations/{id}/members",
+    "GET /api/v1/token?aud={service}",
+    "GET /.well-known/jwks.json",
+    "POST /api/v1/verify",
+    "GET /{owner}/{slug}",
+    "SyftHubClient (Python SDK)",
+    "SyftHubClient (TypeScript SDK)",
+    "syft CLI command"
+  ]
+}
